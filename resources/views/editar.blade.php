@@ -69,6 +69,8 @@
                         @csrf
                         <!-- Token de seguridad de Laravel -->
 
+                        @method('PUT')
+
                         <!-- TÍTULO -->
                         <div class="mb-3">
                             <label class="form-label">Título</label>
