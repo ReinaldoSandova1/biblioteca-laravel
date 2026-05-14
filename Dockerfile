@@ -17,7 +17,11 @@ RUN composer install
 
 RUN touch database/database.sqlite
 
+RUN chmod -R 777 storage bootstrap/cache
+
 ENV DB_CONNECTION=sqlite
+
+RUN php artisan migrate --force
 
 EXPOSE 10000
 
